@@ -9,21 +9,21 @@
     <!-- SEO Meta Tags -->
     <meta name="description"
         content="Janith Graphic Studio is a premium agency in Sri Lanka specializing in creative Graphic Design and professional IT Solutions. We elevate brands with world-class visual identity and support.">
-    <meta name="keywords"content="Janith Graphic Studio, JGS Lanka Co, JGS, Graphic Design, Branding, IT Services, Logo Design, Digital Art, Sri Lanka, Janith Athma Herath,">
+    <meta name="keywords" content="Janith Graphic Studio, JGS Lanka Co, JGS, Graphic Design, Branding, IT Services, Logo Design, Digital Art, Sri Lanka, Janith Athma Herath">
     <meta name="author" content="Janitha Athma Herath / JGS LANKA Co.">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://janithgraphicstudio.vercel.app/">
-    <meta property="og:title" content="JGS LANKA Co. | Official website">
+    <meta property="og:title" content="JGS LANKA Co. | Premium Graphic Design & IT Solutions">
     <meta property="og:description"content="Elevate your brand with world-class graphic design and IT solutions. Specialized in branding, digital art, and business support.">
     <meta property="og:image" content="assets/images/cover.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://janithgraphicstudio.vercel.app/">
-    <meta property="twitter:title" content="JGS LANKA Co. | Official website">
+    <meta property="twitter:title" content="JGS LANKA Co. | Premium Graphic Design & IT Solutions">
     <meta property="twitter:description" content="Elevate your brand with world-class graphic design and IT solutions.">
     <meta property="twitter:image" content="assets/images/cover.jpg">
 
@@ -37,108 +37,125 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/section-nav.css"></head>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "JGS LANKA Co.",
+      "image": "assets/images/logo.png",
+      "@id": "https://janithgraphicstudio.vercel.app/",
+      "url": "https://janithgraphicstudio.vercel.app/",
+      "telephone": "+94702001859",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Street",
+        "addressLocality": "Ibbagamuwa",
+        "addressRegion": "Kurunegala",
+        "postalCode": "60500",
+        "addressCountry": "LK"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/jgslanka",
+        "https://www.instagram.com/jgslanka"
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+
 <body>
+    <div id="page-loader" class="page-loader" aria-hidden="true">
+        <div class="page-loader__inner">
+            <img src="assets/images/logo.png" alt="JGS LANKA Co. Logo" class="page-loader__logo">
+            <div class="page-loader__spinner"></div>
+            <span class="page-loader__text">JGS LANKA CO.</span>
+        </div>
+    </div>
+
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
-
-    <!-- FLOATING SECTION NAVIGATION (Desktop Only) -->
-    <nav class="section-nav" id="sectionNav">
-        <div class="section-nav__brand">
-            <div class="section-nav__logo">
-                <img src="assets/images/logo.png" alt="JGS Lanka Co." class="section-nav__logo-img">
-            </div>
-            <span class="section-nav__name">JGS LANKA Co.</span>
-        </div>
-        <ul class="section-nav__list">
-            <li class="section-nav__item">
-                <a href="#home" class="section-nav__link active" data-section="home">
-                    <span class="section-nav__dot"></span>
-                    <span class="section-nav__text">Home</span>
-                </a>
-            </li>
-            <li class="section-nav__item">
-                <a href="#services" class="section-nav__link" data-section="services">
-                    <span class="section-nav__dot"></span>
-                    <span class="section-nav__text">Services</span>
-                </a>
-            </li>
-            <li class="section-nav__item">
-                <a href="#portfolio" class="section-nav__link" data-section="portfolio">
-                    <span class="section-nav__dot"></span>
-                    <span class="section-nav__text">Portfolio</span>
-                </a>
-            </li>
-            <li class="section-nav__item">
-                <a href="#about" class="section-nav__link" data-section="about">
-                    <span class="section-nav__dot"></span>
-                    <span class="section-nav__text">About</span>
-                </a>
-            </li>
-            <li class="section-nav__item">
-                <a href="#process" class="section-nav__link" data-section="process">
-                    <span class="section-nav__dot"></span>
-                    <span class="section-nav__text">Process</span>
-                </a>
-            </li>
-            <li class="section-nav__item">
-                <a href="#faq" class="section-nav__link" data-section="faq">
-                    <span class="section-nav__dot"></span>
-                    <span class="section-nav__text">FAQ</span>
-                </a>
-            </li>
-            <li class="section-nav__item">
-                <a href="#designer" class="section-nav__link" data-section="contact">
-                    <span class="section-nav__dot"></span>
-                    <span class="section-nav__text">About Me</span>
-                </a>
-            </li>
-            <li class="section-nav__item">
-                <a href="#contact" class="section-nav__link" data-section="contact">
-                    <span class="section-nav__dot"></span>
-                    <span class="section-nav__text">Contact</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
 
     <header class="header" id="header">
         <div class="container ">
             <nav class="nav">
                 <a href="#" class="nav__logo">
-                    <img src="assets/images/logo.png" alt="" class="nav__logo-img">
+                    <img src="assets/images/vb.png" alt="JGS LANKA Co. Logo" class="nav__logo-img">
                     JGS LANKA Co.<span class="dot">.</span>
                 </a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                        <li class="nav__item"><a href="https://jgslankaportfolio.pages.dev/"
-                                class="nav__link">Portfolio</a></li>
-                        <li class="nav__item"><a href="https://companyfilehost.great-site.net/" class="nav__link">CDB
-                                Server</a></li>
+                        <li class="nav__item"><a href="#other-services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="https://jgslankaportfolio.pages.dev/" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="https://jgslankasoftwaresolution.great-site.net/" target="_blank" class="nav__link button-primary">Downloads</a></li>
+                         <li class="nav__item"><a href="https://sinhaai.66ghz.com/" target="_blank" class="nav__link button-primary">SINHA AI</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
-                        <li class="nav__item"><a href="https://jgsshop.great-site.net/"
-                                class="nav__link button-primary">Shop</a></li>
                     </ul>
                     <div class="nav__close" id="nav-close">
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="fa-solid fa-bars-staggered"></i>
+                <div class="nav__toggle-wrapper">
+                    <!-- Mobile Search Trigger & Input -->
+                    <div class="mobile-search-wrapper" id="mobile-search-wrapper">
+                        <input type="text" placeholder="Search..." class="mobile-search-input-expand" id="mobile-search-input">
+                        <button class="mobile-search-icon" id="mobile-search-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <div class="search-dropdown" id="mobile-search-dropdown"></div>
+                    </div>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
 
+    <!-- Floating Search Bar Below Header -->
+    <div class="floating-search-container" id="floating-search-container">
+        <div class="container floating-search-box-wrapper">
+            <div class="search-box">
+                <input type="text" placeholder="Search sections..." class="search-input" id="page-search-input">
+                <button class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="search-dropdown" id="page-search-dropdown"></div>
+        </div>
+    </div>
+
     <main class="main">
         <!-- HERO SECTION -->
         <section class="home" id="home">
             <div class="home__bg-elements">
-                <img src="assets/images/hero_bg.png" alt="" class="home__bg-img">
+                <img src="assets/images/hero_bg.png" alt="Hero Background" class="home__bg-img">
                 <div class="blob blob-1"></div>
                 <div class="blob blob-2"></div>
             </div>
@@ -148,13 +165,11 @@
                     <span class="home__subtitle">Redefining Digital Aesthetics</span>
                     <h1 class="home__title">Welcome To<br> <span class="gradient-text">JGS LANKA CO.</span></h1>
                     <p class="home__description">
-                        Welcome to Janith Graphic Studio, your go-to destination for high quality graphic design, and
-                        print design services. Our team of experts is dedicated to delivering visually
-                        stunning, impactful designs that help your brand stand out.
+                        Welcome to JGS LANKA CO., your premier hub for high-quality Graphic Design, Web Design, Custom Software Systems, and Database Development. We deliver visually stunning, high-performance digital solutions to help your business stand out and thrive.
                     </p>
                     <div class="home__buttons">
-                        <a href="https://sinhaai.great-site.net/" class="button">Try SINHA AI</a>
-                        <a href="#services" class="button button--ghost">Our Services <i
+                        <a href="https://jgslankaportfolio.pages.dev/" class="button">PORTFOLIO</a>
+                        <a href="#other-services" class="button button--ghost">Our Services <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -163,32 +178,218 @@
                     <!-- Dynamic CSS grid or 3D element placeholder -->
                     <div class="card-stack">
                         <div class="card-visual card-visual--1">
-                            <i class="fa-solid fa-paint-roller"></i>
-                            <span>Branding</span>
+                            <i class="fa-solid fa-palette"></i>
+                            <span>Graphic Design</span>
                         </div>
                         <div class="card-visual card-visual--2">
-                            <i class="fa-solid fa-vector-square"></i>
-                            <span>Design</span>
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>Web & Software</span>
                         </div>
                         <div class="card-visual card-visual--3">
-                            <i class="fa-solid fa-pen-nib"></i>
-                            <span>Illustration</span>
+                            <i class="fa-solid fa-database"></i>
+                            <span>Database Systems</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICES SECTION -->
+        <!-- OTHER PORTFOLIO SECTION -->
+        <section class="other-portfolio" id="other-portfolio">
+            <div class="other-portfolio__bg">
+                <div class="other-portfolio__blob other-portfolio__blob--1"></div>
+                <div class="other-portfolio__blob other-portfolio__blob--2"></div>
+            </div>
+
+            <div class="container other-portfolio__container">
+                <div class="other-portfolio__content">
+                    <span class="other-portfolio__badge">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        Janith Graphic Studio
+                    </span>
+                    <h2 class="other-portfolio__title">
+                        Explore Our <span class="gradient-text">Other Portfolio</span>
+                    </h2>
+                    <p class="other-portfolio__description" lang="si">
+                        අපගේ සම්පූර්ණ Graphic Design Portfolio අඩවිය — Logo Design, Event Posts, Social Media Covers, Company Branding, YouTube Thumbnails සහ තවත් premium creative works collection එකක් explore කරන්න.
+                    </p>
+
+                    <div class="other-portfolio__tags">
+                        <span class="other-portfolio__tag"><i class="fa-solid fa-pen-nib"></i> Logo Design</span>
+                        <span class="other-portfolio__tag"><i class="fa-solid fa-calendar-days"></i> Event Posts</span>
+                        <span class="other-portfolio__tag"><i class="fa-brands fa-facebook"></i> Social Media</span>
+                        <span class="other-portfolio__tag"><i class="fa-solid fa-crown"></i> Branding</span>
+                        <span class="other-portfolio__tag"><i class="fa-brands fa-youtube"></i> Thumbnails</span>
+                    </div>
+
+                    <div class="other-portfolio__stats">
+                        <div class="other-portfolio__stat">
+                            <span class="other-portfolio__stat-number">12+</span>
+                            <span class="other-portfolio__stat-label">Years Experience</span>
+                        </div>
+                        <div class="other-portfolio__stat">
+                            <span class="other-portfolio__stat-number">250+</span>
+                            <span class="other-portfolio__stat-label">Projects</span>
+                        </div>
+                        <div class="other-portfolio__stat">
+                            <span class="other-portfolio__stat-number">100%</span>
+                            <span class="other-portfolio__stat-label">Satisfaction</span>
+                        </div>
+                    </div>
+
+                    <div class="other-portfolio__actions">
+                        <a href="https://jgslankaportfolio.pages.dev/" class="button" target="_blank" rel="noopener noreferrer">
+                            View Full Portfolio <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="https://jgslankaportfolio.pages.dev/#gallery" class="button button--ghost" target="_blank" rel="noopener noreferrer">
+                            Browse Gallery <i class="fa-solid fa-images"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="other-portfolio__visual">
+                    <a href="https://jgslankaportfolio.pages.dev/" class="other-portfolio__preview" target="_blank" rel="noopener noreferrer" aria-label="Visit JGS Lanka Portfolio website">
+                        <div class="other-portfolio__browser">
+                            <div class="other-portfolio__browser-bar">
+                                <span class="other-portfolio__dot other-portfolio__dot--red"></span>
+                                <span class="other-portfolio__dot other-portfolio__dot--yellow"></span>
+                                <span class="other-portfolio__dot other-portfolio__dot--green"></span>
+                                <span class="other-portfolio__url">jgslankaportfolio.pages.dev</span>
+                                <span class="other-portfolio__live"><span class="other-portfolio__live-pulse"></span> Live</span>
+                            </div>
+                            <div class="other-portfolio__browser-body">
+                                <img src="assets/images/portfolio_1.png" alt="JGS Lanka Portfolio Preview" class="other-portfolio__preview-img" loading="lazy">
+                                <div class="other-portfolio__preview-overlay">
+                                    <span class="other-portfolio__preview-cta">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        Open Portfolio
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="other-portfolio__float-card other-portfolio__float-card--1">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>Graphic Design</span>
+                        </div>
+                        <div class="other-portfolio__float-card other-portfolio__float-card--2">
+                            <i class="fa-solid fa-star"></i>
+                            <span>Premium Quality</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OTHER SERVICES SECTION -->
+        <section class="other-services" id="other-services">
+            <div class="other-services__bg">
+                <div class="other-services__blob other-services__blob--1"></div>
+                <div class="other-services__blob other-services__blob--2"></div>
+            </div>
+
+            <div class="container">
+                <div class="other-services__header">
+                    <span class="other-services__badge">
+                        <i class="fa-solid fa-briefcase"></i>
+                        JGS Lanka Co.
+                    </span>
+                    <h2 class="other-services__title">
+                        Explore Our <span class="gradient-text">Other Services</span>
+                    </h2>
+                    <p class="other-services__subtitle" lang="si">
+                        අපගේ ප්‍රධාන සේවාවන් — Graphic Design, Software Development, Free Consulting සහ Technical Support — ඔබගේ business එක grow කරන්න professional support එකක්.
+                    </p>
+                </div>
+
+                <div class="other-services__grid">
+                    <article class="other-services__card">
+                        <span class="other-services__card-num">01</span>
+                        <div class="other-services__icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="other-services__card-title">Graphic Design Services</h3>
+                        <p class="other-services__card-desc" lang="si">
+                            Logo Design, Branding, Social Media Posts, Event Designs, Banners සහ Print Design — ඔබගේ brand identity එක visually stunning ලෙස build කරන්න.
+                        </p>
+                        <ul class="other-services__features">
+                            <li><i class="fa-solid fa-check"></i> Logo & Branding</li>
+                            <li><i class="fa-solid fa-check"></i> Social Media Design</li>
+                            <li><i class="fa-solid fa-check"></i> Print & Digital Art</li>
+                        </ul>
+                    </article>
+
+                    <article class="other-services__card">
+                        <span class="other-services__card-num">02</span>
+                        <div class="other-services__icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="other-services__card-title">Development Service</h3>
+                        <p class="other-services__card-desc" lang="si">
+                            Web Design, Custom Software, Database Systems සහ E-Commerce Solutions — user-friendly, secure සහ high-performance digital products.
+                        </p>
+                        <ul class="other-services__features">
+                            <li><i class="fa-solid fa-check"></i> Web & E-Commerce</li>
+                            <li><i class="fa-solid fa-check"></i> Custom Software</li>
+                            <li><i class="fa-solid fa-check"></i> Database Systems</li>
+                        </ul>
+                    </article>
+
+                    <article class="other-services__card other-services__card--highlight">
+                        <span class="other-services__card-num">03</span>
+                        <div class="other-services__icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="other-services__card-title">Free Consulting Service</h3>
+                        <p class="other-services__card-desc" lang="si">
+                            ඔබගේ project එක,start-up එක හෝ design idea එක ගැන නොමිලේ professional advice — clear guidance සහ practical solutions ලබා දෙන්නෙමු.
+                        </p>
+                        <ul class="other-services__features">
+                            <li><i class="fa-solid fa-check"></i> 100% Free Session</li>
+                            <li><i class="fa-solid fa-check"></i> Project Planning</li>
+                            <li><i class="fa-solid fa-check"></i> Expert Guidance</li>
+                        </ul>
+                    </article>
+
+                    <article class="other-services__card">
+                        <span class="other-services__card-num">04</span>
+                        <div class="other-services__icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="other-services__card-title">Technical Support</h3>
+                        <p class="other-services__card-desc" lang="si">
+                            Software, Website, Database සහ IT systems සඳහා reliable technical support — issues solve කර, systems maintain කර, smooth operations ensure කරන්න.
+                        </p>
+                        <ul class="other-services__features">
+                            <li><i class="fa-solid fa-check"></i> 24/7 Assistance</li>
+                            <li><i class="fa-solid fa-check"></i> System Maintenance</li>
+                            <li><i class="fa-solid fa-check"></i> Quick Troubleshooting</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION 
         <section class="services section" id="services">
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">Our Services</h2>
-                    <p class="section__subtitle">Explore our diverse portfolio showcasing our expertise in branding, and
-                        digital art.</p>
+                    <p class="section__subtitle">Explore our diverse portfolio showcasing our expertise in branding, and digital art.</p>
                 </div>
 
                 <div class="services__grid">
+                    <div class="service__card">
+                        <div class="service__icon">
+                            <i class="fa-brands fa-figma"></i>
+                        </div>
+                        <h3 class="service__title">Graphic Design Services</h3>
+                        <p class="service__description">
+                            We offer a range of graphic design services to help you create visually stunning and impactful designs for your brand.
+                        </p>
+                        <a href="https://jgslankaportfolio.pages.dev/" class="button button--ghost" target="_blank">View Portfolio <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+
                     <div class="service__card">
                         <div class="service__icon">
                             <i class="fa-solid fa-layer-group"></i>
@@ -197,21 +398,7 @@
                         <p class="service__description">
                             Our portfolio showcases our expertise in branding, Graphic Design, and digital art.
                         </p>
-                        <a href="https://jgslankaportfolio.pages.dev/" class="button button--ghost" target="_blank">View
-                            Portfolio <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-
-                     <div class="service__card">
-                        <div class="service__icon">
-                            <i class="fa-solid fa-computer"></i>
-                        </div>
-                        <h3 class="service__title">JGS Software Solutions </h3>
-                        <p class="service__description">
-                            JGS Software Solutions is a leading software development company in Sri Lanka, providing
-                            innovative and customized software solutions to businesses of all sizes.
-                        </p>
-                        <a href="http://jgssoftware.great-site.net/" class="button button--ghost">Learn More <i
-                                class="fas fa-arrow-right"></i></a>
+                        <a href="https://jgslankaportfolio.pages.dev/" class="button button--ghost" target="_blank">Learn More <i class="fas fa-external-link-alt"></i></a>
                     </div>
 
                     <div class="service__card">
@@ -220,13 +407,186 @@
                         </div>
                         <h3 class="service__title">SINHA AI</h3>
                         <p class="service__description">
-                            SINHA AI provides state-of-the-art artificial intelligence tools to help you with coding,
-                            content creation, image generation, and more. Experience the future of AI-powered
-                            productivity.
+                            SINHA AI provides state-of-the-art artificial intelligence tools to help you with coding, content creation, image generation, and more. Experience the future of AI-powered productivity.
                         </p>
-                        <a href="https://sinhaai.great-site.net/" class="button button--ghost" target="_blank">Try SINHA AI
-                            <i class="fas fa-rocket"></i></a>
+                        <a href="https://sinhaai.66ghz.com/" class="button button--ghost" target="_blank">Learn More <i class="fas fa-external-link-alt"></i></a>
                     </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- WEB DESIGN DETAIL SECTION -->
+        <section class="service-detail-section" id="projects">
+            <div class="container service-detail__container">
+                <div class="service-detail__data">
+                    <span class="service-detail__badge">Web Design & Development</span>
+                    <h2 class="service-detail__title">Premium Web Solutions</h2>
+                    <p class="service-detail__description">
+                        We design and develop premium, responsive, and secure websites! From stunning personal portfolios and landing pages to complete business profile websites and high-performance e-commerce web stores tailored to your needs.
+                        <br><br>
+                        <span lang="si">අපි ඔබගේ අවශ්‍යතාවයට අනුව ඕනෑම උපාංගයකට ගැළපෙන පරිදි (Responsive), වේගවත් සහ සෙවුම් යන්ත්‍රවලට හිතකාමී (SEO-friendly) ආකර්ෂණීය වෙබ් අඩවි සැලසුම් කර දෙන්නෙමු.</span>
+                    </p>
+                    
+                    <div class="service-detail__features">
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div class="feature__text">
+                                <h4>Responsive Layouts</h4>
+                                <p>Optimized for mobile, tablet, and desktop views.</p>
+                            </div>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-gauge-high"></i></div>
+                            <div class="feature__text">
+                                <h4>High Performance</h4>
+                                <p>Built for speed to ensure minimal bounce rates.</p>
+                            </div>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div class="feature__text">
+                                <h4>SEO Optimized</h4>
+                                <p>Rank higher on search engines with clean layouts.</p>
+                            </div>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="feature__text">
+                                <h4>Secure Setup</h4>
+                                <p>SSL certificate support and secure code structure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-detail__example">
+                    <div class="example__img-wrapper">
+                        <img src="assets/images/portfolio_2.png" alt="E-Commerce Store Example" class="example__img" loading="lazy">
+                    </div>
+                    <span class="example__tag">Web Application</span>
+                    <h3 class="example__title">JGS E-Commerce Web Store</h3>
+                    <p class="example__desc">
+                        A fully-featured digital storefront showcasing custom payment integrations, interactive layouts, animations, and secure checkout mechanisms.
+                    </p>
+                    <button type="button" class="button button--ghost" id="explore-store-btn">
+                        Explore Store <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOFTWARE DEV DETAIL SECTION -->
+        <section class="service-detail-section" id="software-details">
+            <div class="container service-detail__container">
+                <div class="service-detail__example">
+                    <div class="example__img-wrapper">
+                        <img src="assets/images/project.jpg" alt="Software System Example" class="example__img" loading="lazy">
+                    </div>
+                    <span class="example__tag">Desktop Application</span>
+                    <h3 class="example__title">JGS Billing & Inventory System</h3>
+                    <p class="example__desc">
+                        A custom desktop utility built to optimize grocery and retail inventory, print invoices, and track daily sales with high security.
+                    </p>
+                    <a href="https://jgslankasoftwaresolution.great-site.net/" class="button button--ghost" target="_blank">Downloads Portal <i class="fas fa-external-link-alt"></i></a>
+                </div>
+
+                <div class="service-detail__data">
+                    <span class="service-detail__badge">Software Development</span>
+                    <h2 class="service-detail__title">Custom Software Systems</h2>
+                    <p class="service-detail__description">
+                        Automate your workflows and scale your business operations with our customized software applications. We build secure, modular desktop and cloud systems tailored precisely to your company's unique logic.
+                        <br><br>
+                        <span lang="si">ඔබගේ ව්‍යාපාරයේ සියලුම කටයුතු ස්වයංක්‍රීය කිරීමට සහ කාර්යක්ෂමතාව ඉහළ නැංවීමට විශේෂිත මෘදුකාංග පද්ධති (Custom Software Systems) අපි නිර්මාණය කරන්නෙමු.</span>
+                    </p>
+                    
+                    <div class="service-detail__features">
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                            <div class="feature__text">
+                                <h4>Billing Systems</h4>
+                                <p>Automated invoicing, prints, and sales records.</p>
+                            </div>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-cubes"></i></div>
+                            <div class="feature__text">
+                                <h4>Inventory & Stock</h4>
+                                <p>Track items, warnings, and classifications.</p>
+                            </div>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-wifi-slash"></i></div>
+                            <div class="feature__text">
+                                <h4>Offline Capability</h4>
+                                <p>Run desktop tools locally without constant internet.</p>
+                            </div>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-chart-line"></i></div>
+                            <div class="feature__text">
+                                <h4>Detailed Reports</h4>
+                                <p>Generate daily, monthly, and yearly sales graphs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DATABASE SYSTEMS DETAIL SECTION -->
+        <section class="service-detail-section" id="database-details">
+            <div class="container service-detail__container">
+                <div class="service-detail__data">
+                    <span class="service-detail__badge">Database Systems</span>
+                    <h2 class="service-detail__title">Structured Database Solutions</h2>
+                    <p class="service-detail__description">
+                        Data is your business's most valuable asset. We design robust database schemas, secure SQL server hosting environments, and customized management portals to keep your records safe, organized, and easily retrievable.
+                        <br><br>
+                        <span lang="si">ව්‍යාපාරික දත්ත ක්‍රමවත්ව ගබඩා කිරීමට, ආරක්ෂා කිරීමට සහ පහසුවෙන් පරිශීලනය කිරීමට ශක්තිමත් SQL දත්ත සමුදා පද්ධති (Database Systems) සකස් කර දෙන්නෙමු.</span>
+                    </p>
+                    
+                    <div class="service-detail__features">
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-database"></i></div>
+                            <div class="feature__text">
+                                <h4>SQL Architecture</h4>
+                                <p>Custom tables, keys, and index structures.</p>
+                            </div>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-floppy-disk"></i></div>
+                            <div class="feature__text">
+                                <h4>Backup Systems</h4>
+                                <p>Never lose records with automated daily backups.</p>
+                            </div>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-user-lock"></i></div>
+                            <div class="feature__text">
+                                <h4>User Access Control</h4>
+                                <p>Role-based credentials for secure access management.</p>
+                            </div>
+                        </div>
+                        <div class="feature__item">
+                            <div class="feature__icon"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="feature__text">
+                                <h4>API Integration</h4>
+                                <p>Connect databases smoothly to mobile and web apps.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-detail__example">
+                    <div class="example__img-wrapper">
+                        <img src="assets/images/portfolio_3.png" alt="Database System Example" class="example__img" loading="lazy">
+                    </div>
+                    <span class="example__tag">Database & Hosting</span>
+                    <h3 class="example__title">JGS Database & CDB Server</h3>
+                    <p class="example__desc">
+                        A secure centralized database hosting system designed to store files, user records, and system configurations with high uptime.
+                    </p>
+                    <a href="https://companyfilehost.great-site.net/" class="button button--ghost" target="_blank">View CDB Server <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </section>
@@ -240,29 +600,39 @@
                 </div>
 
                 <div class="portfolio__grid">
-                    <article class="portfolio__item large">
+                    <article class="portfolio__item">
                         <div class="portfolio__img-wrapper">
-                            <img src="assets/images/portfolio_1.png" alt="Nebula Tech Branding" class="portfolio__img">
+                            <img src="assets/images/portfolio_1.png" alt="Nebula Tech Branding" class="portfolio__img" loading="lazy">
                         </div>
                         <div class="portfolio__data">
-                            <h3 class="portfolio__title"></h3>
-                            <span class="portfolio__category">Design</span>
+                            <h3 class="portfolio__title">Nebula Tech Branding</h3>
+                            <span class="portfolio__category">Graphic Design</span>
                         </div>
                     </article>
 
                     <article class="portfolio__item">
                         <div class="portfolio__img-wrapper">
-                            <img src="assets/images/g4.jpg" alt="Zenith App UI" class="portfolio__img">
+                            <img src="assets/images/portfolio_2.png" alt="E-Commerce Web Store" class="portfolio__img" loading="lazy">
                         </div>
                         <div class="portfolio__data">
-                            <h3 class="portfolio__title">CoverPage Design</h3>
-                            <span class="portfolio__category">Design</span>
+                            <h3 class="portfolio__title">E-Commerce Web Store</h3>
+                            <span class="portfolio__category">Web Design & Development</span>
                         </div>
                     </article>
 
                     <article class="portfolio__item">
                         <div class="portfolio__img-wrapper">
-                            <img src="assets/images/3.jpg" alt="Apex Gear Packaging" class="portfolio__img">
+                            <img src="assets/images/portfolio_3.png" alt="JGS Database & CDB Server" class="portfolio__img" loading="lazy">
+                        </div>
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">JGS Database & CDB Server</h3>
+                            <span class="portfolio__category">Database Systems</span>
+                        </div>
+                    </article>
+
+                    <article class="portfolio__item">
+                        <div class="portfolio__img-wrapper">
+                            <img src="assets/images/3.jpg" alt="WINGMARK Company Branding" class="portfolio__img" loading="lazy">
                         </div>
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">WINGMARK</h3>
@@ -306,7 +676,7 @@
                 </div>
 
                 <div class="about__img">
-                    <img src="assets/images/about.png" alt="Creative Team" class="about__img-inner">
+                    <img src="assets/images/about.png" alt="Creative Team" class="about__img-inner" loading="lazy">
                 </div>
             </div>
         </section>
@@ -327,7 +697,7 @@
         </section>
 
         <!-- PROJECT SECTION -->
-        <section class="about section" id="about">
+        <section class="about section" id="achievements">
             <div class="container about__container">
                 <div class="about__data">
                     <h2 class="section__title">We Are Project</h2>
@@ -353,18 +723,17 @@
                 </div>
 
                 <div class="about__img">
-                    <img src="assets/images/project.jpg" alt="Creative Team" class="about__img-inner">
+                    <img src="assets/images/project.jpg" alt="Creative Team" class="about__img-inner" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <!-- SERVICES SECTION -->
-        <section class="services section" id="services">
+        <!-- PRODUCTS SECTION -->
+        <section class="services section" id="products">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">Our Project</h2>
-                    <p class="section__subtitle">Explore our diverse portfolio showcasing our expertise in branding, and
-                        digital art.</p>
+                    <h2 class="section__title">Our Products & Platforms</h2>
+                    <p class="section__subtitle">Explore some of our leading self-developed software applications, platforms, and digital systems.</p>
                 </div>
 
                 <div class="services__grid">
@@ -378,7 +747,7 @@
                             content creation, image generation, and more. Experience the future of AI-powered
                             productivity.
                         </p>
-                        <a href="https://sinhaai.great-site.net/" class="service__link">Try Now</a>
+                        <a href="https://sinhaai.66ghz.com/" class="button button--ghost" target="_blank">Try Now <i class="fas fa-external-link-alt"></i></a>
                     </div>
 
                     <div class="service__card">
@@ -387,22 +756,21 @@
                         </div>
                         <h3 class="service__title">JGS Lanka Education</h3>
                         <p class="service__description">
-                            JGS Lanka Education is a leading educational institution in Sri Lanka, offering a wide range
-                            of academic programs and services to students and professionals.
+                            JGS Lanka Education is a leading educational platform in Sri Lanka, offering a wide range of
+                            IT courses, software development tutorials, and guides for students and professionals.
                         </p>
-                        <a href="https://sites.google.com/view/jgssoftware/home" class="service__link">Learn More</a>
+                        <a href="https://sites.google.com/view/jgssoftware/home" class="button button--ghost" target="_blank">Learn More <i class="fas fa-external-link-alt"></i></a>
                     </div>
 
                     <div class="service__card">
                         <div class="service__icon">
                             <i class="fa-solid fa-laptop"></i>
                         </div>
-                        <h3 class="service__title">Smart Tools</h3>
+                        <h3 class="service__title">JGS Smart Tools</h3>
                         <p class="service__description">
-                            Smart Tools is a leading educational institution in Sri Lanka, offering a wide range of
-                            academic programs and services to students and professionals.
+                            JGS Smart Tools is a collection of useful online utilities, tools, and calculators designed to simplify day-to-day digital tasks and boost productivity.
                         </p>
-                        <a href="https://sinhaai.great-site.net/smarttool/" class="service__link">Try Now</a>
+                        <a href="https://sinhaai.66ghz.com/smarttool/" class="button button--ghost" target="_blank">Try Now <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
@@ -568,7 +936,7 @@
                 <div class="designer__content">
                     <span class="section__subtitle">My Intro</span>
                     <h2 class="section__title">Hi..I'm Janitha Athma Herath</h2>
-                    <span class="designer__profession">PROFESSIONAL ARTIST & GRAPHIC DESIGNER</span>
+                    <span class="designer__profession">ARTIST, GRAPHIC DESIGNER & SOFTWARE DEVELOPER</span>
 
                     <div class="designer__data-grid">
                         <div class="designer__info-group">
@@ -579,7 +947,7 @@
                                 <li><strong>District:</strong> Kurunegala</li>
                                 <li><strong>Province:</strong> North Western Province</li>
                                 <li><strong>Language:</strong> Sinhala, English</li>
-                                <li><strong>Job:</strong> Artist & Graphic Designer</li>
+                                <li><strong>Job:</strong> Artist, Designer & Developer</li>
                             </ul>
                         </div>
 
@@ -657,6 +1025,26 @@
 
                             <div class="skills__data">
                                 <div class="skills__titles">
+                                    <h3 class="skills__name">Web & UI/UX Design</h3>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 85%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Database Systems (SQL)</h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage" style="width: 80%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
                                     <h3 class="skills__name">Computer Hardware</h3>
                                     <span class="skills__number">95%</span>
                                 </div>
@@ -674,7 +1062,7 @@
 
                 <div class="designer__img-wrapper">
                     <!-- Using placeholder image as discussed -->
-                    <img src="assets/images/my.png" alt="Janitha Athma Herath" class="designer__img">
+                    <img src="assets/images/my.png" alt="Janitha Athma Herath" class="designer__img" loading="lazy">
                 </div>
             </div>
         </section>
@@ -734,7 +1122,7 @@
                 <h3 class="footer__title">Company</h3>
                 <ul class="footer__list">
                     <li><a href="#about" class="footer__link">About</a></li>
-                    <li><a href="#services" class="footer__link">Services</a></li>
+                    <li><a href="#other-services" class="footer__link">Services</a></li>
                     <li><a href="https://jgslankaportfolio.pages.dev/" class="footer__link">Portfolio</a></li>
                     <li><a href="https://jgsshop.great-site.net/" class="footer__link">Shop</a></li>
                 </ul>
@@ -760,7 +1148,7 @@
     </a>
 
     <!-- Scroll Down -->
-    <a href="#services" class="scrolldown" id="scroll-down">
+    <a href="#other-portfolio" class="scrolldown" id="scroll-down">
         <i class="fa-solid fa-arrow-down"></i>
     </a>
 
@@ -768,15 +1156,34 @@
     <div class="chatbot-container">
         <div class="chatbot-panel">
             <div class="chatbot-header">
-                <h3>JGS ChatBot Assistant</h3>
+                <div class="chatbot-header-profile">
+                    <div class="chatbot-header-avatar">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <span class="online-indicator"></span>
+                    </div>
+                    <div class="chatbot-header-info">
+                        <h3>JGS AI Assistant</h3>
+                        <span class="chatbot-status">Online • Ready to Help</span>
+                    </div>
+                </div>
                 <button class="chatbot-close">&times;</button>
             </div>
-            <div class="chatbot-messages" id="chatbot-messages">
-                <!-- Messages will be added here dynamically -->
-            </div>
-            <div class="chatbot-input">
-                <input type="text" placeholder="Type your message..." id="user-input">
-                <button id="get-started-btn"><i class="fas fa-paper-plane"></i></button>
+
+            <div class="chatbot-body">
+                <div class="chatbot-messages" id="chatbot-messages"></div>
+
+                <div class="chatbot-quick-chips" id="chatbot-quick-chips">
+                    <button type="button" class="chatbot-chip" data-chip="portfolio"><i class="fa-solid fa-images"></i> Portfolio</button>
+                    <button type="button" class="chatbot-chip" data-chip="services"><i class="fa-solid fa-briefcase"></i> Services</button>
+                    <button type="button" class="chatbot-chip" data-chip="web"><i class="fa-solid fa-laptop-code"></i> Web Projects</button>
+                    <button type="button" class="chatbot-chip" data-chip="contact"><i class="fa-solid fa-phone"></i> Contact</button>
+                    <button type="button" class="chatbot-chip" data-chip="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                </div>
+
+                <div class="chatbot-input">
+                    <input type="text" placeholder="Type your question..." id="user-input" autocomplete="off">
+                    <button type="button" id="get-started-btn" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+                </div>
             </div>
         </div>
         <button class="chatbot-button pulse" id="chatbot-button">
@@ -791,60 +1198,64 @@
                 <i class="fa-solid fa-user-astronaut"></i>
             </span>
             <div class="chatbot-notification-message">
-                <strong>Hi, I am JGS ChatBot Assistant</strong><br>
+                <strong>Hi, I am JGS AI Assistant</strong><br>
                 Can I Help You Today?
             </div>
         </div>
         <span class="chatbot-notification-close" id="chatbot-notification-close">&times;</span>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <!-- Web Demo Modal -->
+    <div class="web-demo-modal" id="web-demo-modal" aria-hidden="true">
+        <div class="web-demo-modal__overlay" id="web-demo-modal-overlay"></div>
+        <div class="web-demo-modal__panel" role="dialog" aria-modal="true" aria-labelledby="web-demo-modal-title">
+            <div class="web-demo-modal__header">
+                <div class="web-demo-modal__header-text">
+                    <span class="web-demo-modal__badge">
+                        <i class="fa-solid fa-globe"></i> Premium Web Solutions
+                    </span>
+                    <h2 class="web-demo-modal__title" id="web-demo-modal-title">Live Web Demos</h2>
+                    <p class="web-demo-modal__subtitle" id="web-demo-modal-subtitle"></p>
+                </div>
+                <button type="button" class="web-demo-modal__close" id="web-demo-modal-close" aria-label="Close demo panel">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="web-demo-modal__body">
+                <div class="web-demo-modal__grid" id="web-demo-modal-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accessibility Tools Widget -->
+    <div class="a11y-widget" id="a11y-widget">
+        <button class="a11y-toggle" id="a11y-toggle" aria-label="Toggle Accessibility Tools">
+            <i class="fa-solid fa-wheelchair"></i>
+        </button>
+        <div class="a11y-panel" id="a11y-panel" aria-hidden="true">
+            <div class="a11y-header">
+                <h3>Accessibility Tools</h3>
+            </div>
+            <ul class="a11y-options">
+                <li><button type="button" data-a11y-action="increase-text"><i class="fa-solid fa-magnifying-glass-plus"></i> Increase Text</button></li>
+                <li><button type="button" data-a11y-action="decrease-text"><i class="fa-solid fa-magnifying-glass-minus"></i> Decrease Text</button></li>
+                <li><button type="button" data-a11y-action="grayscale"><i class="fa-solid fa-barcode"></i> Grayscale</button></li>
+                <li><button type="button" data-a11y-action="high-contrast"><i class="fa-solid fa-circle-half-stroke"></i> High Contrast</button></li>
+                <li><button type="button" data-a11y-action="negative-contrast"><i class="fa-solid fa-eye"></i> Negative Contrast</button></li>
+                <li><button type="button" data-a11y-action="light-background"><i class="fa-regular fa-lightbulb"></i> Light Background</button></li>
+                <li><button type="button" data-a11y-action="links-underline"><i class="fa-solid fa-link"></i> Links Underline</button></li>
+                <li><button type="button" data-a11y-action="readable-font"><i class="fa-solid fa-font"></i> Readable Font</button></li>
+                <li><button type="button" data-a11y-action="reset"><i class="fa-solid fa-rotate-left"></i> Reset</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/js/loader.js" defer></script>
+    <script src="assets/data/web-demos-data.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/web-demos.js" defer></script>
+    <script src="assets/js/accessibility.js" defer></script>
 </body>
 
 </html>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "JGS LANKA Co.",
-      "image": "assets/images/logo.png",
-      "@id": "https://janithgraphicstudio.vercel.app/",
-      "url": "https://janithgraphicstudio.vercel.app/",
-      "telephone": "+94702001859",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Main Street",
-        "addressLocality": "Ibbagamuwa",
-        "addressRegion": "Kurunegala",
-        "postalCode": "60500",
-        "addressCountry": "LK"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "08:00",
-        "closes": "20:00"
-      },
-      "sameAs": [
-        "https://www.facebook.com/jgslanka",
-        "https://www.instagram.com/jgslanka"
-      ],
-      "priceRange": "$$"
-    }
-    </script>
-</body>
-
-</html>
-
-
-
-
-
