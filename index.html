@@ -44,6 +44,15 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <style>
+        /* Mobile Logo style (hidden on mobile devices) */
+        @media screen and (max-width: 968px) {
+            .nav__logo {
+                display: none !important;
+            }
+        }
+    </style>
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -124,8 +133,9 @@
                     <!-- Mobile Search Trigger & Input -->
                     <div class="mobile-search-wrapper" id="mobile-search-wrapper">
                         <input type="text" placeholder="Search..." class="mobile-search-input-expand" id="mobile-search-input">
-                        <button class="mobile-search-icon" id="mobile-search-trigger">
+                        <button class="mobile-search-icon" id="mobile-search-trigger" aria-label="Search">
                             <i class="fa-solid fa-magnifying-glass"></i>
+                            <span class="search-btn-text">Search</span>
                         </button>
                         <div class="search-dropdown" id="mobile-search-dropdown"></div>
                     </div>
@@ -143,8 +153,9 @@
         <div class="container floating-search-box-wrapper">
             <div class="search-box">
                 <input type="text" placeholder="Search sections..." class="search-input" id="page-search-input">
-                <button class="search-button">
+                <button class="search-button" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
+                    <span class="search-btn-text">Search</span>
                 </button>
             </div>
             <div class="search-dropdown" id="page-search-dropdown"></div>
@@ -1100,45 +1111,126 @@
     </main>
 
     <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__content">
-                <a href="#" class="footer__logo">JGS LANKA Co.</a>
+        <div class="container footer__container-top">
+            <!-- Brand / Logo & Info -->
+            <div class="footer__brand">
+                <div class="footer__brand-header">
+                    <img src="assets/images/logo.png" alt="JGS LANKA CO. Logo" class="footer__logo-badge">
+                    <div class="footer__brand-title-group">
+                        <h2 class="footer__brand-title">JGS LANKA CO.</h2>
+                        <span class="footer__brand-year">2026</span>
+                    </div>
+                </div>
                 <p class="footer__description">
-                    Premium graphic design solutions tailored for ambitious brands.
+                    Welcome to JGS LANKA CO., your premier hub for high-quality Graphic Design, Web Design, Custom Software Systems, and Database Development. We deliver visually stunning, high-performance digital solutions to help your business stand out and thrive.
                 </p>
-                <div class="footer__social">
-                    <a href="https://www.facebook.com/janithgraphicstudio.eblog?_rdc=1&_rdr#" target="_blank"
-                        class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.youtube.com/channel/UCihEwYPV1pACRyi0fJlboRQ" target="_blank"
-                        class="social-icon"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.whatsapp.com/catalog/94702001859/?app_absent=0" target="_blank"
-                        class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/janitha-athma-herath-a7a3ba271/" target="_blank"
-                        class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="footer__social-section">
+                    <span class="footer__social-label">Follow Us</span>
+                    <span class="footer__social-line"></span>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/jgslanka" target="_blank" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/jgslanka" target="_blank" class="footer__social-link" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/janitha-athma-herath-a7a3ba271/" target="_blank" class="footer__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/channel/UCihEwYPV1pACRyi0fJlboRQ" target="_blank" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/jgslanka" target="_blank" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@jgslanka" target="_blank" class="footer__social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer__links">
-                <h3 class="footer__title">Company</h3>
+            <!-- Glassmorphic Card -->
+            <div class="footer__glass-card">
+                <div class="footer__glass-card-header">
+                    <div class="footer__glass-card-badge">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>TOP QUALITY BRAND</span>
+                    </div>
+                    <a href="https://jgslankaportfolio.pages.dev/" target="_blank" class="footer__glass-card-external-link" aria-label="View Portfolio">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <p class="footer__glass-card-text">
+                    JGS LANKA CO. is powered by high-performance systems and creative experts to deliver continuous opportunities for enhancing your brand's digital presence and success.
+                </p>
+            </div>
+        </div>
+
+        <hr class="footer__divider">
+
+        <div class="container footer__container-bottom">
+            <!-- 4 Columns -->
+            <div class="footer__links-col">
+                <h3 class="footer__col-title">Navigation</h3>
                 <ul class="footer__list">
-                    <li><a href="#about" class="footer__link">About</a></li>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">About Us</a></li>
                     <li><a href="#other-services" class="footer__link">Services</a></li>
-                    <li><a href="https://jgslankaportfolio.pages.dev/" class="footer__link">Portfolio</a></li>
-                    <li><a href="https://jgsshop.great-site.net/" class="footer__link">Shop</a></li>
+                    <li><a href="#projects" class="footer__link">Projects</a></li>
+                    <li><a href="https://jgslankaportfolio.pages.dev/" target="_blank" class="footer__link">Portfolio</a></li>
+                    <li><a href="https://jgslankasoftwaresolution.great-site.net/" target="_blank" class="footer__link">Downloads</a></li>
+                    <li><a href="#faq" class="footer__link">FAQ</a></li>
                 </ul>
             </div>
 
-            <div class="footer__links">
-                <h3 class="footer__title">Support</h3>
+            <div class="footer__links-col">
+                <h3 class="footer__col-title">Our Services</h3>
                 <ul class="footer__list">
-                    <li><a href="#" class="footer__link">FAQ</a></li>
-                    <li><a href="#" class="footer__link">Privacy Policy</a></li>
-                    <li><a href="#" class="footer__link">Terms of Service</a></li>
+                    <li><a href="#other-services" class="footer__link"><i class="fa-solid fa-angle-right"></i> Graphic Design</a></li>
+                    <li><a href="#other-services" class="footer__link"><i class="fa-solid fa-angle-right"></i> Web & Software</a></li>
+                    <li><a href="#other-services" class="footer__link"><i class="fa-solid fa-angle-right"></i> Database Systems</a></li>
+                    <li><a href="#other-services" class="footer__link"><i class="fa-solid fa-angle-right"></i> Custom Software</a></li>
+                    <li><a href="#other-services" class="footer__link"><i class="fa-solid fa-angle-right"></i> Digital Branding</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__links-col">
+                <h3 class="footer__col-title">Resources</h3>
+                <ul class="footer__list">
+                    <li><a href="https://jgslankasoftwaresolution.great-site.net/" target="_blank" class="footer__link">Downloads</a></li>
+                    <li><a href="https://jgslankaportfolio.pages.dev/#gallery" target="_blank" class="footer__link">Gallery</a></li>
+                    <li><a href="https://jgsshop.great-site.net/" target="_blank" class="footer__link">Shop</a></li>
+                    <li><a href="https://sinhaai.66ghz.com/" target="_blank" class="footer__link">Sinha AI</a></li>
+                    <li><a href="#contact" class="footer__link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__links-col">
+                <h3 class="footer__col-title">Need Help?</h3>
+                <ul class="footer__contact-list">
+                    <li class="footer__contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="footer__contact-details">
+                            <strong>Hotline:</strong>
+                            <a href="tel:+94702001859">+94 (70) 200 1859</a>
+                        </div>
+                    </li>
+                    <li class="footer__contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="footer__contact-details">
+                            <strong>Email:</strong>
+                            <a href="janithgraphicstudio.e@gmail.com">janithgraphicstudio.e@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="footer__contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="footer__contact-details">
+                            <strong>WhatsApp:</strong>
+                            <a href="https://wa.me/94702001859" target="_blank">+94 (70) 200 1859</a>
+                        </div>
+                    </li>
+                    <li class="footer__contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="footer__contact-details">
+                            <strong>Location:</strong>
+                            <span>Main Street, Hettipola, Hettipola, Sri Lanka.</span>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="container footer__bottom">
-            <p class="footer__copy">&copy; 2025 JGS LANKA Co. All rights reserved.</p>
+
+        <div class="container footer__copyright-container">
+            <p class="footer__copy">COPYRIGHT &copy; 2026 JGS LANKA CO. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
@@ -1198,8 +1290,8 @@
                 <i class="fa-solid fa-user-astronaut"></i>
             </span>
             <div class="chatbot-notification-message">
-                <strong>Hi, I am JGS AI Assistant</strong><br>
-                Can I Help You Today?
+                <strong>Need Help?</strong><br>
+                For a more reliable & efficient service, use our AI Assistant!
             </div>
         </div>
         <span class="chatbot-notification-close" id="chatbot-notification-close">&times;</span>

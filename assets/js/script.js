@@ -1,3 +1,7 @@
+/* ==================== AI CLOUDFLARE WORKER ==================== */
+// Place your deployed Cloudflare Worker URL here
+const AI_WORKER_URL = "https://jgs-ai-bot.lankagamage111.workers.dev/";
+
 /* ==================== MENU SHOW Y HIDDEN ==================== */
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
@@ -386,8 +390,8 @@ document.addEventListener('DOMContentLoaded', () => {
             notification.style.display = 'flex';
             setTimeout(() => {
                 notification.style.display = 'none';
-            }, 6000);
-        }, 2500);
+            }, 15000); // 15 seconds auto-close
+        }, 1000); // 1 second delay
 
         if (notificationClose) {
             notificationClose.addEventListener('click', () => {
@@ -657,41 +661,121 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
             }
 
-            return {
-                text: "I couldn't find an exact match, but our team can help you directly on WhatsApp!<br><br>හරිත පිළිතුරක් සොයාගත නොහැකි වූ නමුත් WhatsApp හරහා අප හා සම්බන්ධ විය හැක.",
-                html: `
-                    <div class="bot-custom-card">
-                        <div class="bot-custom-card-title"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</div>
-                        <div class="bot-custom-card-desc">Your question: "${query.replace(/"/g, '&quot;')}"</div>
-                        <div class="bot-custom-card-links">
-                            <a href="https://wa.me/94702001859?text=${encodeURIComponent('Inquiry from JGS website: ' + query)}" target="_blank" class="bot-card-btn" style="background:#22c55e; color:white; border-color:#22c55e;"><i class="fab fa-whatsapp"></i> Connect Now</a>
-                            <button class="bot-card-btn ghost" onclick="document.getElementById('page-search-input')?.focus(); document.querySelector('.chatbot-close').click();"><i class="fas fa-search"></i> Search Site</button>
-                        </div>
-                    </div>
-                `
-            };
+            return null;
         }
 
-        const handleUserSendMessage = (messageText) => {
+        const formatAIResponse = (text) => {
+            if (!text) return "";
+            return text
+                // Format Bold (**text**)
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                // Format Bullet Points (* or -)
+                .replace(/^[\*-]\s+(.*)$/gm, '&bull; $1')
+                // Convert newlines to <br> tags
+                .replace(/\n/g, '<br>');
+        };
+
+        const callAI = async (userMessage) => {
+            // Note: The Gemini API key and logic are now securely hidden inside your Cloudflare Worker.
+            const response = await fetch(AI_WORKER_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    userMessage: userMessage
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error('AI Worker request failed');
+            }
+
+            const data = await response.json();
+            return data.response;
+        };
+
+        const handleUserSendMessage = async (messageText) => {
             const message = (messageText || userInput.value).trim();
             if (message === '') return;
+
+            // Check AI limit
+            const today = new Date().toISOString().split('T')[0];
+            let usageCount = parseInt(localStorage.getItem('jgs_ai_chat_count') || '0');
+            let usageDate = localStorage.getItem('jgs_ai_chat_date');
+
+            if (usageDate !== today) {
+                usageCount = 0;
+                localStorage.setItem('jgs_ai_chat_date', today);
+            }
+
+            if (usageCount >= 10) {
+                addUserMessage(message);
+                userInput.value = '';
+                setTimeout(() => {
+                    addBotMessage("You have reached the daily limit of 10 AI queries. Please contact our Customer Support via WhatsApp for further assistance.<br><br>ඔබගේ දෛනික ප්‍රශ්න 10 සීමාව අවසන්. වැඩිදුර සහය සඳහා අපගේ පාරිභෝගික අංශය WhatsApp හරහා සම්බන්ධ කරගන්න.", () => {
+                        const htmlContainer = document.createElement('div');
+                        htmlContainer.innerHTML = `
+                            <div class="bot-custom-card">
+                                <div class="bot-custom-card-title"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</div>
+                                <div class="bot-custom-card-desc">Reach out for direct assistance.</div>
+                                <div class="bot-custom-card-links">
+                                    <a href="https://wa.me/94702001859" target="_blank" class="bot-card-btn" style="background:#22c55e; color:white; border-color:#22c55e;"><i class="fab fa-whatsapp"></i> Connect Now</a>
+                                </div>
+                            </div>
+                        `;
+                        chatbotMessages.appendChild(htmlContainer.firstElementChild);
+                        scrollToBottom();
+                        setTimeout(showResetButton, 800);
+                    });
+                }, 500);
+                return;
+            }
 
             addUserMessage(message);
             userInput.value = '';
 
             const reply = parseNLPQuery(message);
 
-            setTimeout(() => {
-                addBotMessage(reply.text, () => {
-                    if (reply.html) {
-                        const htmlContainer = document.createElement('div');
-                        htmlContainer.innerHTML = reply.html;
-                        chatbotMessages.appendChild(htmlContainer.firstElementChild);
-                        scrollToBottom();
-                    }
-                    setTimeout(showResetButton, 800);
-                });
-            }, 500);
+            if (reply) {
+                setTimeout(() => {
+                    addBotMessage(reply.text, () => {
+                        if (reply.html) {
+                            const htmlContainer = document.createElement('div');
+                            htmlContainer.innerHTML = reply.html;
+                            chatbotMessages.appendChild(htmlContainer.firstElementChild);
+                            scrollToBottom();
+                        }
+                        setTimeout(showResetButton, 800);
+                    });
+                }, 500);
+            } else {
+                usageCount++;
+                localStorage.setItem('jgs_ai_chat_count', usageCount);
+                
+                const loadingId = 'loading-' + Date.now();
+                const loadingHtml = `<div class="chatbot-message bot-message loading" id="${loadingId}">
+                                        <div class="chatbot-avatar"><i class="fas fa-robot"></i></div>
+                                        <div class="message-content">Thinking<span class="loading-dots"><span>.</span><span>.</span><span>.</span></span></div>
+                                     </div>`;
+                chatbotMessages.insertAdjacentHTML('beforeend', loadingHtml);
+                scrollToBottom();
+
+                try {
+                    const aiResponseRaw = await callAI(message);
+                    const formattedResponse = formatAIResponse(aiResponseRaw);
+                    document.getElementById(loadingId)?.remove();
+                    
+                    addBotMessage(formattedResponse, () => {
+                        setTimeout(showResetButton, 800);
+                    });
+                } catch (error) {
+                    document.getElementById(loadingId)?.remove();
+                    addBotMessage("Sorry, I'm having trouble connecting to my AI brain right now. Please try again later or contact support via WhatsApp.", () => {
+                        setTimeout(showResetButton, 800);
+                    });
+                }
+            }
         };
 
         chatbotSendBtn.addEventListener('click', () => handleUserSendMessage());
